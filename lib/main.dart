@@ -62,21 +62,21 @@ class _HomePageState extends State<HomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              isFull ? "LOTADO" : "PODE !",
+              isFull ? "LOTADO" : "PODE ENTRAR!",
               style: TextStyle(
                 fontSize: 30,
-                color: isFull ? Colors.red : Colors.blue,
+                color: isFull ? Colors.red : Colors.white,
                 fontWeight: FontWeight.w900,
-                letterSpacing: isFull ? 25 : 0,
+                letterSpacing: isFull ? 0 : 0,
               ),
             ),
             const SizedBox(height: 32), //box de divisão
             Text(
               //"0",
               contador.toString(),
-              style: const TextStyle(
+              style: TextStyle(
                 fontSize: 100,
-                color: Colors.white,
+                color: isFull ? Colors.red : Colors.white,
                 fontWeight: FontWeight.w400,
                 letterSpacing: 0,
               ),
@@ -94,17 +94,19 @@ class _HomePageState extends State<HomePage> {
                     primary: Colors.black,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16),
-                      /*side: const BorderSide(
-                        color: Colors.green,
+                      side: BorderSide(
+                        color: isEmpty
+                            ? Colors.red.withOpacity(0.5)
+                            : Colors.transparent,
                         width: 5,
-                      ),*/
+                      ),
                     ),
                   ),
                   child: const Text(
                     "SAIU",
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 16,
+                      fontSize: 21,
                     ),
                   ),
                 ),
@@ -118,17 +120,19 @@ class _HomePageState extends State<HomePage> {
                     primary: Colors.black,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
-                      /*side: const BorderSide(
-                        color: Colors.green,
+                      side: BorderSide(
+                        color: isFull
+                            ? Colors.red.withOpacity(0.5)
+                            : Colors.transparent,
                         width: 5,
-                      ),*/
+                      ),
                     ),
                   ),
                   child: const Text(
                     "ENTROU",
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 16,
+                      fontSize: 21,
                     ),
                   ),
                 ),
