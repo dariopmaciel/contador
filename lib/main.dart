@@ -43,6 +43,7 @@ class _HomePageState extends State<HomePage> {
 
   bool get isEmpty => contador == 0;
   bool get isFull => contador == 10;
+  bool get zero => contador == 0;
 
   @override
   Widget build(BuildContext context) {
@@ -65,7 +66,11 @@ class _HomePageState extends State<HomePage> {
               isFull ? "LOTADO" : "PODE ENTRAR!",
               style: TextStyle(
                 fontSize: 30,
-                color: isFull ? Colors.red : Colors.white,
+                color: isFull
+                    ? Colors.red
+                    : zero
+                        ? Colors.blue
+                        : Colors.white,
                 fontWeight: FontWeight.w900,
                 letterSpacing: isFull ? 0 : 0,
               ),
@@ -76,7 +81,11 @@ class _HomePageState extends State<HomePage> {
               contador.toString(),
               style: TextStyle(
                 fontSize: 100,
-                color: isFull ? Colors.red : Colors.white,
+                color: isFull
+                    ? Colors.red
+                    : zero
+                        ? Colors.blue
+                        : Colors.white,
                 fontWeight: FontWeight.w400,
                 letterSpacing: 0,
               ),
