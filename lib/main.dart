@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   bool get isEmpty => contador == 0;
-  bool get isFull => contador == 10;
+  bool get isFull => contador == 20;
   bool get zero => contador == 0;
 
   @override
