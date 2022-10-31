@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                   style: TextButton.styleFrom(
                     backgroundColor:
                         isEmpty ? Colors.white.withOpacity(0.2) : Colors.white,
-                    fixedSize: const Size(100, 100),
+                    fixedSize: const Size(125, 125),
                     primary: Colors.black,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16),
@@ -125,7 +125,7 @@ class _HomePageState extends State<HomePage> {
                   style: TextButton.styleFrom(
                     backgroundColor:
                         isFull ? Colors.white.withOpacity(0.2) : Colors.white,
-                    fixedSize: const Size(100, 100),
+                    fixedSize: const Size(125, 125),
                     primary: Colors.black,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20),
